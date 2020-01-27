@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<TextView
+    android:id="@+id/tvTitle"
+    style="@style/BasicStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:text="Volume of a Sphere"
+    />
+    <TextView
+        android:id="@+id/tvRadius"
+        style="@style/BasicStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Radius: "
+        />
+    <EditText
+        android:id="@+id/etRadius"
+        style="@style/BasicStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/tvRadius"
+        android:inputType="numberDecimal"
+        />
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvRadius"
+        android:background="#FFC107"
+        android:onClick="calculate"
+        android:text="Calculate Volume"
+        android:textSize="32dp"
+        />
+    <TextView
+        android:id="@+id/tvAnswer"
+        style="@style/BasicStyle"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/calculate_button"
+        android:layout_marginTop="10dp"
+        android:background="#726971"
+        />
+</RelativeLayout>
