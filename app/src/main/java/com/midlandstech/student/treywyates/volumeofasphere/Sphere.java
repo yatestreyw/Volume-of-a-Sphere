@@ -6,13 +6,15 @@ import java.text.DecimalFormat;
 
 //Defines a sphere
 public class Sphere {
-    private double r, volume;
+    private double r;
 
     public Sphere (double r) {
         this.r = r;
+    }
 
-        // Calculates volume when instantiated using the radius given
-        this.volume = (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+    // Calculates volume using the radius given
+    private double calcVolume() {
+        return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
     }
 
     @Override
@@ -21,6 +23,6 @@ public class Sphere {
         DecimalFormat df = new DecimalFormat("###.###");
 
         return ("A sphere with a radius of " + r +
-                " has a volume of " + df.format(volume));
+                " has a volume of " + df.format(calcVolume()));
     }
 }
